@@ -1,9 +1,9 @@
 'use strict'
 
 import React from 'react'
-import CounterContainer from './components/Counter/';
+import CountersContainer from './components/Counters/';
 
 const App = () => (
-  <CounterContainer />
+  <CountersContainer />
 )
 export default App

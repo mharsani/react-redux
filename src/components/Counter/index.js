@@ -1,7 +1,6 @@
 'use strict'
 
 import React from 'react'
-import { connect } from 'react-redux'
 
 
 export const Counter = ({counter, increment, decrement}) => (
@@ -12,18 +11,5 @@ export const Counter = ({counter, increment, decrement}) => (
     </div>
 )
 
-const mapStateToProps = (state) => ({
-    counter: state
-})
 
-const mapDispatchToProps = (dispatch) => ({
-    decrement: () => {
-        dispatch( { type: 'DECREMENT' })
-      },
-
-      increment: () => {
-       dispatch({ type: 'INCREMENT' })
-      }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+export default Counter
