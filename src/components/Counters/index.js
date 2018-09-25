@@ -4,26 +4,16 @@ import React from 'react'
 import Counter from '../Counter/'
 import { connect } from 'react-redux'
 
-const Counters = ({counter, increment, decrement}) => (
+const Counters = ({counters}) => (
     <div style={{display: 'flex', justifyContent: 'space-around' }}>
-        {[0,0,0].map((param, index) => (
+        {counters.map((counter, index) => (
             <Counter key={index} counter={counter} increment={increment} decrement={decrement}/>
         ))}
     </div>
 )
 
 const mapStateToProps = (state) => ({
-    counter: state
+    counters: state
 })
 
-const mapDispatchToProps = (dispatch) => ({
-    decrement: () => {
-        dispatch( { type: 'DECREMENT' })
-      },
-
-      increment: () => {
-       dispatch({ type: 'INCREMENT' })
-      }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Counters)
+export default connect(mapStateToProps)(Counters)
