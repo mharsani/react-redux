@@ -1,12 +1,13 @@
 'use strict'
 
-import counters, {
+import counters, {initialState} from './index'
+import {
     ADD_COUNTER ,
     REMOVE_COUNTER,
     INCREMENT,
     DECREMENT,
     initialState
-} from './index'
+} from './actions'
 import {expect} from 'chai'
 import deepFreeze from 'deep-freeze'
 
